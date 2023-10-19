@@ -3,35 +3,7 @@ import { Order, OrderSchema } from "./order.ts"
 import { getToken } from "./token.ts";
 import { toNumber } from "./util.ts";
 
-// type ParsedOrder = {
-//   status: 'open' | 'filled' | 'cancelled'
-//   createdAt: number
-//   price: number
-//   txHash: string
-//   chainId: string
-//   type: string
-//   fromAmount: string
-//   toAmount: string
-//   from: string
-//   to: string
-//   metadata: any
-// }
-
-
-// class Tokens {
-//   constructor() {
-
-//   }
-  
-//   async get(address: string) {
-
-//   }
-
-// }
-
 export class UniswapX {
-
-
   static async getOrders(options: { chainId?: number, orderStatus?: string, orderHash?: string }) {
     const get = async () => {
       const url = new URL('https://api.uniswap.org/v2/orders')
